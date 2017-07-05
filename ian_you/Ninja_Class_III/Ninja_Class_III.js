@@ -11,7 +11,7 @@ class Ninja{
     return message;
   }
   showStats(){
-    let message = "Name: "+ this.name+", Health: "+this.health+", Speed: "+ this.speed + ", Strength: " + this.strength;
+    let message = `Name: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`;
     console.log(message);
     return message;
   }
