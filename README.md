@@ -17,6 +17,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 
 # Videos
 [MEAN - Intro to JavaScript](https://youtu.be/NcxV3CyLx6w "MEAN - Intro to JavaScript") <br>
+[MEAN - OOP in JavaScript](https://youtu.be/2yl6Q9SbxjM "MEAN - OOP in JavaScript") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript")
