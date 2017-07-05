@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // function star_string(num){
+        //     var star = '*';
+        //     var starStr = "";
+        //     for (var i = 0; i < num; i++){
+        //         starStr += star;
+        //     }
+        //     return starStr;
+        // }
+        // console.log(star_string(7));
+
+        // function draw_stars(arr){
+        //     var starString = "";
+        //     var star = "*";
+        //     for(var i = 0; i < arr.length; i++){
+        //         for(var j = 0; j < arr[i]; j++){
+        //             starString += star;
+        //         }
+        //         console.log(starString);
+        //         starString = "";
+        //     }
+        //     return starString;
+        // }
+        // console.log(draw_stars([4, 6, 1, 3, 5, 7, 25]));
+
+        function print_chars(arr){
+            var charString = "";
+            var star = "*";
+            var char = '';
+            for(var i = 0; i < arr.length; i++){
+                if (arr[i].constructor == String){
+                    for(var j = 0; j < arr[i].length; j++){
+                        char = arr[i].substring(0,1).toLowerCase();
+                        charString += char;
+                    }
+                }
+                for(var j = 0; j < arr[i]; j++){
+                    charString += star;
+                }
+                console.log(charString);
+                charString = "";
+            }
+            return charString;
+        }
+        console.log(print_chars([4, 'Tom', 1, 'Michael', 5, 7, 'Jimmy Smith']));
+    </script>
+</head>
+<body>
+</body>
+</html>
