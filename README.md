@@ -21,6 +21,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript")
+[ES6 Syntax Cheatsheet](https://github.com/DrkSephy/es6-cheatsheet "ES6 Syntax Cheatsheet")
 
 # Schedule
 
