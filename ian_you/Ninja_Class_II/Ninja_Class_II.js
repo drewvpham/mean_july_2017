@@ -14,29 +14,27 @@ function Ninja(name){
     this.health += 10;
     return this;
   }
+  this.punch = function (ninja) {
+    if (ninja instanceof Ninja == false){
+      console.log("Not a ninja, unable to punch");
+    }
+    else{
+      ninja.health-=5;
+      console.log(ninja.name + " was punched by "+this.name+" and lost 5 health!");
+      return this;
+    }
+  }
+  this.kick = function (ninja) {
+    if (ninja instanceof Ninja == false){
+      console.log("Not a ninja, unable to kick");
+    }
+    else{
+      ninja.health -= 3*this.strength;
+      console.log(ninja.name + " was kicked by "+this.name+" and lost "+3*this.strength+" health!");
+      return this;
+    }
+  }
 }
-
-Ninja.prototype.punch = function (ninja) {
-  if (ninja instanceof Ninja == false){
-    console.log("Not a ninja, unable to punch");
-  }
-  else{
-    ninja.health-=5;
-    console.log(ninja.name + " was punched by "+this.name+" and lost 5 health!");
-    return this;
-  }
-};
-
-Ninja.prototype.kick = function (ninja) {
-  if (ninja instanceof Ninja == false){
-    console.log("Not a ninja, unable to kick");
-  }
-  else{
-    ninja.health -= 3*this.strength;
-    console.log(ninja.name + " was kicked by "+this.name+" and lost "+3*this.strength+" health!");
-    return this;
-  }
-};
 
 function Samurai(name){
   this.name = name;
