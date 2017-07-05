@@ -9,7 +9,7 @@ function Ninja(name){
         console.log("My name is " + self.name)
     }
     this.showStats = function(){
-        console.log("Strength is: " + strength, "Speed is: " + speed, "Health is: " + self.health);
+        console.log("Strength is: " + strength, "Speed is: " + speed, "Health is: " + this.health);
     }
     this.drinkSake = function(){
         self.health += 10;
