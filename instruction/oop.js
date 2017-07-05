@@ -51,29 +51,40 @@ Warrior.prototype.attack = function(warrior){
 
 
 //creating classes with the new ES6 syntax
-class Warrior {
+class Human {
 	constructor(name){
-		this.class = 'Warrior';
-		this.name = name;
-		this.level = 1;
-		this.strength = 7;
-		this.intelligence = 4;
-		this.constitution = 8;
-		this.dexterity = 5;
-		this.health = 160;
+		this._name = name;
+		this._level = 1;
+		this._strength = 5;
+		this._intelligence = 5;
+		this._constitution = 5;
+		this._dexterity = 5;
+		this._health = 5;
+		calculateHealth(this);
 	}
 	attack(warrior){
 		let damage = this.strength * 3;
 		warrior.health -= damage;
 	}
+	get name(){
+		return this._name;
+	}
+	set name(name){
+		this._name = name
+	}
 }
 
-let bob = new Warrior('Bob');
-let jeff = new Warrior('Jeff');
+function calculateHealth(human){
+	human.health = human.constitution * 20;
+}
 
-bob.attack(jeff);
+let bob = new Human('Bob');
+// let jeff = new Warrior('Jeff');
 
-console.log(jeff.health);
+// bob.attack(jeff);
+
+console.log(bob.name = 'Cody');
+console.log(bob.name);
 
 
 
