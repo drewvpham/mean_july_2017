@@ -60,6 +60,7 @@ class Human {
 		this._constitution = 5;
 		this._dexterity = 5;
 		this._health = 5;
+		this.test()
 		calculateHealth(this);
 	}
 	attack(warrior){
@@ -72,6 +73,10 @@ class Human {
 	set name(name){
 		this._name = name
 	}
+	//private function
+	static test(){
+		console.log('test');
+	}
 }
 
 function calculateHealth(human){
@@ -79,18 +84,10 @@ function calculateHealth(human){
 }
 
 let bob = new Human('Bob');
+Human.test()
 // let jeff = new Warrior('Jeff');
 
 // bob.attack(jeff);
 
 console.log(bob.name = 'Cody');
 console.log(bob.name);
-
-
-
-
-
-
-
-
-
