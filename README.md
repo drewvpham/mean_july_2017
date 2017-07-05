@@ -20,7 +20,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - OOP in JavaScript](https://youtu.be/2yl6Q9SbxjM "MEAN - OOP in JavaScript") <br>
 
 # Resources
-[W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript")
+[W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
 [ES6 Syntax Cheatsheet](https://github.com/DrkSephy/es6-cheatsheet "ES6 Syntax Cheatsheet")
 
 # Schedule
