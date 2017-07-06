@@ -61,7 +61,7 @@ class Deck {
 		this.reset();
 		this.shuffle();
 	}
-	// deal([Bob, Jeff], 2)
+
 	deal(players, num){
 		if(players.constructor != Array){
 			players = [players];
@@ -74,7 +74,6 @@ class Deck {
 		for(let player of players){
 			player.calculateValue();
 		}
-
 	}
 
 	reset(){
@@ -133,4 +132,9 @@ let cody = new Player('Cody');
 deck.deal(cody, 2);
 
 console.log(cody.hand);
+
+
+
+
+
 
