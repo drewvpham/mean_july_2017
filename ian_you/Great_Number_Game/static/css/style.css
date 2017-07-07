@@ -1,0 +1,21 @@
+div.wrong{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: white;
+  border: 2px solid black;
+  line-height: 200px;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+div.correct{
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  color: white;
+  border: 2px solid black;
+  line-height: 100px;
+  text-align: center;
+  margin: 10px 0px;
+}

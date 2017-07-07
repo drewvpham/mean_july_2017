@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Welcome to the Great Number Game!</h1>
+  <p>I am thinking of a number between 1 and 100</p>
+  <p>Take a guess!</p>
+    <% if (content.guess) { %>
+      <% if (content.guess < content.answer){ %>
+        <div class="wrong">
+          Too Low!
+        </div>
+      <% } else if (content.guess > content.answer){ %>
+        <div class="wrong">
+          Too High!
+        </div>
+      <% } else { %>
+        <div class="correct">
+           <%= content.answer %> was the number!
+          <a href="/play_again"><button>Play Again!</button></a>
+        </div>
+      <% } %>
+    <% } %>
+    <% if (content.guess !== content.answer){ %>
+    <form action="/guess" method="post">
+      <p><input type="text" name="guess"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    <% } %>
+  </div>
+</body>
+</html>
