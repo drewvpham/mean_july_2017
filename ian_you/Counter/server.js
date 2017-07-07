@@ -34,14 +34,14 @@ app.get('/reset', function(req, res) {
   res.redirect("/" );
 })
 
-// post route for adding a user
-// app.post('/users', function(req, res) {
-//  console.log("POST DATA", req.body);
-//  // This is where we would add the user to the database
-//  // Then redirect to the root route
-//  res.redirect('/');
-// })
-// tell the express app to listen on port 8000
+//post route for adding a user
+app.post('/users', function(req, res) {
+ console.log("POST DATA", req.body);
+ // This is where we would add the user to the database
+ // Then redirect to the root route
+ res.redirect('/');
+})
+//tell the express app to listen on port 8000
 app.listen(8000, function() {
  console.log("listening on port 8000");
 });
