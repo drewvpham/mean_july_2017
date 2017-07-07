@@ -22,8 +22,8 @@ let server = http.createServer(function(request, response){
 			break;
 		default:
 			response.writeHead(404, {"Content-Type": "text/html"});
-			response.write("404 - Page not found")
-			response.end()
+			response.write("404 - Page not found");
+			response.end();
 	}
 	// if(request.url === '/'){
 	// 	fs.readFile('index2.html', 'utf8', function(errors, contents){

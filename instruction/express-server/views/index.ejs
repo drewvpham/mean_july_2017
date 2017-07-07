@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<p>Session name is currently: <%= name %></p>
+		<form action="/users" method="post">
+			<div>
+				<label>Name</label>
+				<input type="text" name="name">
+			</div>
+			<input type="submit" value="submit">
+		</form>
+		<div>
+			<ul>
+				<% for(let user of users) { %>
+					<li><%= user.name %></li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

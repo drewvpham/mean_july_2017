@@ -24,6 +24,7 @@ function Deck(){
 	}
 	this.reset();
 }
+
 function Game(){
 	this.players = [];
 	this.deck = new Deck();

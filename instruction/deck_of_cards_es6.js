@@ -1,3 +1,9 @@
+class Game {
+	constructor(players){
+		
+	}
+}
+
 class Player {
 	constructor(name){
 		this.name = name;
