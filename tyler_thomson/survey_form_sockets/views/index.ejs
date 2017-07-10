@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Index Page</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var socket = io.connect();
+      $('#myForm').submit(function() {
+        name = $("input[name = name]").val();
+        dojo = $("select[name = dojo]").val();
+        language = $("select[name = language]").val();
+        comment = $("textarea[name = comment]").val();
+
+        socket.emit('posting_form', {'name': name,
+                                    'dojo': dojo,
+                                    'language': language,
+                                    'comment': comment
+                                  });
+        return false;
+      })
+      socket.on("updated_message", function(data){
+        let random_num = Math.floor((Math.random() * 1000) + 1);
+        let message = `<p>You emitted the following information to the server:
+        { name: \"${data.name}\", location: \"${data.dojo}\", language: \"${data.language}\", comment: \"${data.comment}\" }</p>
+        <p>Your random number is ${random_num}</p>`;
+        $('#infoMessage').append(message)
+        })
+    })
+  </script>
+  <body>
+    <div id="infoMessage">
+
+    </div>
+    <form id="myForm" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name">
+      <label for="dojo">Dojo location:</label>
+      <select name="dojo">
+        <option value="mountain_view">Mountain View</option>
+        <option value="chicago">Chicago</option>
+        <option value="seattle">Seattle</option>
+        <option value="dallas">Dallas</option>
+      </select>
+      <label for="language">Favorite Language:</label>
+      <select name="language">
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="ruby">Ruby</option>
+        <option value="c">C</option>
+      </select>
+      <label for="comment">Comment (optional):</label>
+      <textarea name="comment" rows="8" cols="80"></textarea>
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>
