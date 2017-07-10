@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(function(){
+          var socket = io.connect();
+          var name, dojo_location, fav_lang, comment;
+          $('form').submit(function(){
+            name = $('#name').val();
+            dojo_location = $('#dojo_location').val()
+            fav_lang = $('#fav_lang').val()
+            comment = $('#comment').val()
+            let data = {
+              'name' : name,
+              'dojo_location' : dojo_location,
+              'fav_lang' : fav_lang,
+              'comment' : comment
+            };
+            socket.emit('data_submit', {'data' : data})
+            return false;
+          })
+
+          socket.on('data_submited', function(data){
+            console.log(data.data);
+            $('#emit').html(`<p>You have enterned the following information to the server: { 'name': ${data.data.name}, 'dojo_location': ${data.data.dojo_location}, 'fav_lang': ${data.data.fav_lang}, 'comment': ${data.data.comment} } </p>
+            <p>
+             Your server generated lucky number was ${data.data.luckyNumber}
+            </p>`).css('background-color', 'green')
+
+          })
+
+        })
+      })
+    </script>
+  <title>Survey Form Revisted</title>
+</head>
+<body>
+  <div id='emit'> </div>
+  <form action="#" method="post">
+    <p><label>Your Name: </label><input id='name' type="text" name="name"></p>
+    <p><label>Dojo Location: </label>
+      <select id='dojo_location' name="dojo_location">
+        <option value="mountain_view">Moutain View</option>
+        <option value="dallas">Dallas</option>
+        <option value="new_york">New York</option>
+        <option value="seattle">Seattle</option>
+    </select></p>
+    <p><label>Favorite Language: </label>
+      <select id='fav_lang' name="fav_lang">
+        <option value="node">Node</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="C++">C++</option>
+    </select></p>
+    <textarea id='comment' name="comment" rows="8" cols="40"></textarea>
+    <p><input type="submit" value="Submit"></p>
+  </form>
+
+</body>
+</html>
