@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var socket = io.connect();
+        console.log('on the frontend console');
+        socket.on('currentCount', function(data){
+          $('#count').html(`${data.count}`);
+          console.log(data.count);
+        });
+        $('#addCount').click(function(){
+          socket.emit('addCount');
+        });
+        $('#reset').click(function(){
+          let count = 0
+          socket.emit('reset', {'count' : count});
+        });
+      })
+    </script>
+    <title>Epic Buttom Game</title>
+  </head>
+  <body>
+    <h1>The button has been pushed <span id='count'></span> time(s)</h1>
+    <p>Push the button to update the count!</p>
+    <p><button type="button" id="addCount">Push the Epic Button</button></p>
+    <p><button type="button" id="reset">Reset count</button></p>
+  </body>
+</html>
