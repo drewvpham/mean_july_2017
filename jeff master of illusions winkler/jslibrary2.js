@@ -7,13 +7,13 @@ function each(arr, callback) {
 }
 
 var _ = {
-    map: function(arr, callback) {
+    map: function(arr, num) {
       for (i = 0; i < array.length; i++) {
         var arr2.push(arr[i] * 3);
       }
       return arr2;
     },
-    reduce: function(arr) {
+    reduce: function(arr,callback) {
       var arr2 = array_sum(arr)
       return arr2;
     },

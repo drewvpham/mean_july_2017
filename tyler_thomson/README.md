@@ -20,13 +20,14 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - OOP in JavaScript](https://youtu.be/2yl6Q9SbxjM "MEAN - OOP in JavaScript") <br>
 [MEAN - Basic Node Server](https://youtu.be/goOdjMw5KoQ "MEAN - Basic Node Server") <br>
 [MEAN - Setting up an Express Server](https://youtu.be/WEh_DI3OBg4 "MEAN - Setting up an Express Server") <br>
+[MEAN - Socket.IO](https://youtu.be/6xMJDs9vkio "MEAN - Socket.IO") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
 [ES6 Syntax Cheatsheet](https://github.com/DrkSephy/es6-cheatsheet "ES6 Syntax Cheatsheet") <br>
 [ExpressJS Documentation](https://expressjs.com/en/4x/api.html "ExpressJS Documentation") <br>
-
-
+[Socket.IO Documentation](https://socket.io/docs/ "Socket.IO Documentation") <br>
+[MongoDB Documentation](https://docs.mongodb.com/manual/ "MongoDB Documentation") <br>
 
 # Schedule
 
