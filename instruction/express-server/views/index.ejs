@@ -5,6 +5,7 @@
 </head>
 <body>
 	<div class="container">
+		<div id="counter"></div>
 		<p>Session name is currently: <%= name %></p>
 		<form action="/users" method="post">
 			<div>
@@ -21,5 +22,19 @@
 			</ul>
 		</div>
 	</div>
+	<script type="text/javascript">
+		let n = localStorage.getItem('counter');
+		console.log("n: ", n);
+		if(n === null){
+			n = 0;
+		} else {
+			console.log(n, typeof(n));
+			n = parseInt(n);
+		}
+		n++;
+		localStorage.setItem('counter', n);
+		var el = document.getElementById('counter');
+		el.innerHTML = n;
+	</script>
 </body>
 </html>

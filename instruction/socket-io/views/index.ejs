@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		$(function(){
+			var socket = io.connect();
+			var name;
+
+			$('#myForm').submit(function(){
+				$('#name_error').html('')
+				name = $('#name_input').val();
+				if(!name){
+					$('#name_error').html('Name cannot be blank').css('color', 'red');
+				} else {
+					socket.emit('new_user', {"name": name})
+				}
+				return false;
+			})
+
+			socket.on('user_created', function(data){
+				$('#myButton').css('display', 'block');
+			})
+
+			$('#myButton').click(function(){
+				socket.emit('button_clicked', { "name": name });
+			})
+
+			socket.on('button_response', function(data){
+				let html_str = `<p> ${data.name} clicked the button.</p>`;
+				$('#log').append(html_str);
+			})
+
+		})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div>
+			<form id="myForm">
+				<div>
+					<label>What is your name?</label>
+					<input id="name_input" type="text" name="name">
+				</div>
+				<input type="submit" value="Submit">
+			</form>
+			<p id="name_error"></p>
+		</div>
+		<button id="myButton" style="display: none;">Click me!</button>
+		<div id="log"></div>
+	</div>
+</body>
+</html>
