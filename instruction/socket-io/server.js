@@ -19,9 +19,10 @@ var server = app.listen(8000, function(){
 var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
+
 	console.log('new socket connection...');
 	console.log(`Socket ID: ${socket.id}`);
-
+	
 	socket.on('new_user', function(data){
 		socket.user_name = data.name;
 		socket.emit('user_created', { "name": socket.user_name });
@@ -31,6 +32,7 @@ io.sockets.on('connection', function(socket){
 		console.log(data);
 		io.emit('button_response', data);
 	})
+
 })
 
 
