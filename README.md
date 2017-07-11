@@ -29,6 +29,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [ExpressJS Documentation](http://expressjs.com/en/api.html "ExpressJS Documentation") <br>
 [Socket.IO Documentation](https://socket.io/docs/ "Socket.IO Documentation") <br>
 [MongoDB Documentation](https://docs.mongodb.com/manual/ "MongoDB Documentation") <br>
+[MongooseJS Documentation](http://mongoosejs.com/docs/guide.html "MongooseJS Documentation") <br>
 
 # Schedule
 
