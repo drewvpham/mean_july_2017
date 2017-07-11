@@ -21,7 +21,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Basic Node Server](https://youtu.be/goOdjMw5KoQ "MEAN - Basic Node Server") <br>
 [MEAN - Set Up Express Server](https://youtu.be/WEh_DI3OBg4 "MEAN - Set Up Express Server") <br>
 [MEAN - Socket.IO](https://youtu.be/6xMJDs9vkio "MEAN - Socket.IO") <br>
-
+[MEAN - MongoDB](https://youtu.be/0tezVAYzcDc "MEAN - MongoDB") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
@@ -29,6 +29,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [ExpressJS Documentation](http://expressjs.com/en/api.html "ExpressJS Documentation") <br>
 [Socket.IO Documentation](https://socket.io/docs/ "Socket.IO Documentation") <br>
 [MongoDB Documentation](https://docs.mongodb.com/manual/ "MongoDB Documentation") <br>
+[MongooseJS Documentation](http://mongoosejs.com/docs/guide.html "MongooseJS Documentation") <br>
 
 # Schedule
 
