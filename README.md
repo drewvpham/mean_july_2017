@@ -33,6 +33,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MongoDB Documentation](https://docs.mongodb.com/manual/ "MongoDB Documentation") <br>
 [MongooseJS Documentation](http://mongoosejs.com/docs/guide.html "MongooseJS Documentation") <br>
 [TypeScript Documentation](https://www.typescriptlang.org/docs/home.html "TypeScript Documentation") <br>
+[Angular Documentation](https://angular.io/docs "Angular Documentation") <br>
 
 # Schedule
 
