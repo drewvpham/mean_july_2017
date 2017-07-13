@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cat</title>
+</head>
+<body>
+<div id="row">
+    <div>
+      <div>
+         <h2><%= cat.name %></h2>
+         <h4><a href="/">See other cats</a></h4>
+      </div>
+    </div>
+    <div>
+    <h4>More about <%= cat.name %>:</h4>
+    <ul>
+        
+        <li>Age: <%= cat.age %></li>
+        <li>Size: <%= cat.size %></li>
+    </ul>
+    <button><a href="/<%= cat.id %>/edit">Edit</a></button>
+    <form action="/<%= cat.id %>/destroy" method="post"><input type="submit" value="Delete"></form>    
+    </div>
+    
+</div>
+</body>
+</html>

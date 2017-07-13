@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cats</title>
+</head>
+<body>
+<div>
+    <div>
+      <div>
+         <h2>Cats</h2>
+      </div>
+    </div>
+    <div>
+    <ul>
+        <% for (var x in cats) { %>
+        <li>Name: <a href="<%= cats[x].id %>"><%= cats[x].name %></a>, Age: <%= cats[x].age %>, Size: <%= cats[x].size %></li>
+        <% } %>
+    </ul>
+    </div>
+    <button><a href="/new">Add a Cat</a></button>
+</div>
+</body>
+</html>
