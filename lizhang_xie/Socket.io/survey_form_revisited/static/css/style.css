@@ -1,0 +1,9 @@
+#msg{
+    padding: 5px;
+    /*margin: 20px;*/
+    width: 700px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
