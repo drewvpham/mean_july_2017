@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<form action="/messages" method="post">
+				<div>
+					<label>Name:</label>
+				</div>
+				<div>
+					<input type="input" name="name">
+				</div>
+				<div>
+					<label>Message:</label>
+				</div>
+				<div>
+					<textarea rows="4" name="message"></textarea>
+				</div>
+				<input type="submit" value="Post Message">
+            </form>
+        </div>
+        <div id="messages">
+            <% for(let message of messages) { %>
+                <h3> Name: <%= message.name %> </h3>
+				<h3> Message: <%= message.message %></h3>
+				<!-- for each message loop through it's comments array -->
+				<div id="comments">
+					<% for(let comment of message.comments) { %>
+						<h4>Name: <%= comment.name %></h4>
+						<h4>Comment: <%= comment.comment %></h4>
+					<% } %>
+					<form action="/comments" method="post">
+						<input type="hidden" name="message" value="<%= message._id %>">
+						<div>
+							<label>Name:</label>
+						</div>
+						<div>
+							<input type="input" name="name">
+						</div>
+						<div>
+							<label>Comment:</label>
+						</div>
+						<div>
+							<textarea rows="4" name="comment"></textarea>
+						</div>
+						<input type="submit" value="Post Comment">
+					</form>
+				</div>
+            <% } %>
+
+        </div>
+        
+</body>
+</html>
