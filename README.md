@@ -22,6 +22,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Set Up Express Server](https://youtu.be/WEh_DI3OBg4 "MEAN - Set Up Express Server") <br>
 [MEAN - Socket.IO](https://youtu.be/6xMJDs9vkio "MEAN - Socket.IO") <br>
 [MEAN - MongoDB](https://youtu.be/0tezVAYzcDc "MEAN - MongoDB") <br>
+[MEAN - Mongoose Messageboard](https://youtu.be/iPDi2LYO2no "MEAN - Mongoose Messageboard") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
