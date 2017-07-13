@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <link href="/css/style.css" rel="stylesheet">
+        <script>
+            $(document).ready(function () {
+                var socket = io.connect();
+                // $('#myForm').submit(function () { 
+                //     $($('#myForm').prop('elements')).each(function(){
+                //         console.log($(this).val());
+                        
+                //         if($(this).attr('type') != "submit"){
+                //             msg.push()
+                //         }
+                        
+                //     })
+                
+                //     return false;
+                // });
+                $('#myForm').submit(function(event){
+                    var viewArr = $(this).serializeArray();
+                    var view = {};
+                    for(var i in viewArr){
+                        view[viewArr[i].name] =viewArr[i].value;
+                    }
+                    var msg = JSON.stringify(view)
+                    // console.log(msg);
+                    
+                    socket.emit('posting_form', {"msg": msg});
+                    
+                    return false;
+                });
+
+                socket.on('updated_msg', function(data){
+                    $('#msg').html('').css('display','block');
+                    console.log(data.msg);
+                    $('#msg').append(`<p>You emmited the following information to the server: ${data.msg}</p>`);
+                    
+                });
+
+                socket.on('random_number', function(data){
+                    console.log(data.num);
+                    $('#msg').append(`<p>Your lucky number emmitted by the server is ${data.num}</p>`);
+                })
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="msg" style="display: none;">
+            
+        </div>
+        <form id="myForm" action="/result" method="post">
+            <label for="">Your Name: </label>
+            <input type="text" name="name" value="">
+            <p></p>
+            <label for="">Dojo Location: </label>
+            <select name="location">
+                <option value="dallas">Dalls</option>
+                <option value="seattle">Seattle</option>
+                <option value="sillicon valley">Sillicon Valley</option>
+            </select>
+            <p></p>
+            <label for="">Favorite Language: </label>
+            <select name="language">
+                <option value="python">Python</option>
+                <option value="javascript">Javascript</option>
+            </select>
+            <p></p>
+            <label for="">Comment(optional): </label>
+            <p></p>
+            <textarea name="comment" rows="" cols=""></textarea>
+            <p></p>
+            <input type="submit" name="" value="Submit">
+        </form>
+    </body>
+</html>

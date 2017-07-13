@@ -1,0 +1,20 @@
+{
+  "name": "epic_button_game",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lizhang_Xie <lizhang.xie@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/LizhangX/DojoAssignments",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
