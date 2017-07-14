@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.outer-box {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: goldenrod;
+    border: 1px solid black;
+    margin: 2px;
+    padding: 24px;
+}
+
+.inner-box {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+.green {
+    background: green;
+}
+
+.red {
+    background: red;
+}
