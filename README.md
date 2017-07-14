@@ -18,9 +18,24 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 # Videos
 [MEAN - Intro to JavaScript](https://youtu.be/NcxV3CyLx6w "MEAN - Intro to JavaScript") <br>
 [MEAN - OOP in JavaScript](https://youtu.be/2yl6Q9SbxjM "MEAN - OOP in JavaScript") <br>
+[MEAN - Basic Node Server](https://youtu.be/goOdjMw5KoQ "MEAN - Basic Node Server") <br>
+[MEAN - Set Up Express Server](https://youtu.be/WEh_DI3OBg4 "MEAN - Set Up Express Server") <br>
+[MEAN - Socket.IO](https://youtu.be/6xMJDs9vkio "MEAN - Socket.IO") <br>
+[MEAN - MongoDB](https://youtu.be/0tezVAYzcDc "MEAN - MongoDB") <br>
+[MEAN - Mongoose Messageboard](https://youtu.be/iPDi2LYO2no "MEAN - Mongoose Messageboard") <br>
+[MEAN - Intro to TypeScript and Angular (Part 1)](https://youtu.be/Z_C8ZLkEICI "MEAN - Intro to TypeScript and Angular (Part 1)") <br>
+[MEAN - Intro to TypeScript and Angular (Part 2)](https://youtu.be/gB8VFqAI4hc "MEAN - Intro to TypeScript and Angular (Part 2)") <br>
+[MEAN - Angular Event Binding and Forms (Part 2)](https://youtu.be/tFClAHE503M "MEAN - Angular Event Binding and Forms )") <br>
 
 # Resources
-[W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript")
+[W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
+[ES6 Cheatsheet](https://github.com/DrkSephy/es6-cheatsheet "ES6 Cheatsheet") <br>
+[ExpressJS Documentation](http://expressjs.com/en/api.html "ExpressJS Documentation") <br>
+[Socket.IO Documentation](https://socket.io/docs/ "Socket.IO Documentation") <br>
+[MongoDB Documentation](https://docs.mongodb.com/manual/ "MongoDB Documentation") <br>
+[MongooseJS Documentation](http://mongoosejs.com/docs/guide.html "MongooseJS Documentation") <br>
+[TypeScript Documentation](https://www.typescriptlang.org/docs/home.html "TypeScript Documentation") <br>
+[Angular Documentation](https://angular.io/docs "Angular Documentation") <br>
 
 # Schedule
 
