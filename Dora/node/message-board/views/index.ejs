@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1><u>The Dojo Message Board </u></h1>
+    <div class="container">
+      <div>
+        <form action="messages" method="post">
+          <div><labe>Name</label></div>
+            <div>
+              <input type="input" name="name">
+            </div>
+            <div><label>Message</label></div>
+            <div>
+              <textarea rows="5" name="message"></textarea>
+            </div>
+            <input type="submit" value="Post Message">
+
+        </form>
+
+      </div>
+      <div id="messages">
+        <% for(let message of messages){ %>
+          <h3>Name: <%= message.name %></h3>
+          <h3>Message: <%= message.message %></h3>
+          <% for(let comment of message.comments){%>
+            <h4>Name: <%= comment.name %></h4>
+            <h4>Comment: <%= comment.comment%></h4>
+          <% } %>
+          <div>
+            <form action="/comments" method="post">
+              <input type="hidden" name="message" value="<%= message._id %>">
+              <div><labe>Name</label></div>
+                <div>
+                  <input type="input" name="name">
+                </div>
+                <div><label>Comment</label></div>
+                <div>
+                  <textarea class="form-control" rows="3" name="message"></textarea>
+                </div>
+                <input type="submit" value="Post Comment">
+              </form>
+          </div>
+      <%  } %>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
