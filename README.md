@@ -23,7 +23,9 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Socket.IO](https://youtu.be/6xMJDs9vkio "MEAN - Socket.IO") <br>
 [MEAN - MongoDB](https://youtu.be/0tezVAYzcDc "MEAN - MongoDB") <br>
 [MEAN - Mongoose Messageboard](https://youtu.be/iPDi2LYO2no "MEAN - Mongoose Messageboard") <br>
-
+[MEAN - Intro to TypeScript and Angular (Part 1)](https://youtu.be/Z_C8ZLkEICI "MEAN - Intro to TypeScript and Angular (Part 1)") <br>
+[MEAN - Intro to TypeScript and Angular (Part 2)](https://youtu.be/gB8VFqAI4hc "MEAN - Intro to TypeScript and Angular (Part 2)") <br>
+[MEAN - Angular Event Binding and Forms](https://youtu.be/tFClAHE503M "MEAN - Angular Event Binding and Forms") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>

@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit {
+  colors = [];
+
+  fillcolors() {
+    for (let y = 0; y < 10; y++) {
+      this.colors[y] = ('#' + Math.floor(Math.random() * 16777215).toString(16));
+    }
+  }
+
+  ngOnInit() {
+    this.fillcolors();
+  }
+
 }
