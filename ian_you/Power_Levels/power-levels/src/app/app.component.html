@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>Power Component</h1>
+
+  <p>Initial Power Level: 
+    <select [(ngModel)]="power.initial">
+      <option  *ngFor="let initial of powerRange" [ngValue]="initial"> {{ initial }} </option>
+    </select> &nbsp; 
+    <button (click)='calculate(power)'> Calculate Power </button> </p>
+
+  <app-human [power] = 'power' [ngStyle]="subCompStyles" ></app-human>
+  <app-saiyan [power] = 'power' [ngStyle]="subCompStyles"></app-saiyan>
+  <app-super-saiyan [power] = 'power' [ngStyle]="subCompStyles"></app-super-saiyan>
+  <app-super-saiyan-two [power] = 'power' [ngStyle]="subCompStyles"></app-super-saiyan-two>
+  <app-super-saiyan-three [power] = 'power' [ngStyle]="subCompStyles"></app-super-saiyan-three>
+  <app-super-saiyan-four [power] = 'power' [ngStyle]="subCompStyles"></app-super-saiyan-four>
+</div>
+
