@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+</div>
+<div>
+  <div class="outer-box" *ngFor="let switch of switches; let idx = index">
+    <div class="inner-box" (click)="flipSwitch(idx)" [ngClass]="{'green': switch, 'red': !switch}">
+      <h4 style="text-align:center" *ngIf="switch">ON</h4>
+      <h4 style="text-align:center" *ngIf="!switch">OFF</h4>
+    </div>
+  </div>
+</div>
+
+
