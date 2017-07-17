@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quotes Page</title>
+  </head>
+  <body>
+    <h1>Here are the awesome quotes!</h1>
+      <% for(let quote of quotes){ %>
+        <p>"<%= quote.quote %>"</p>
+        <p>-<%= quote.name %> at <%= quote.createdAt %></p>
+        <hr>
+      <% } %>
+  </body>
+</html>

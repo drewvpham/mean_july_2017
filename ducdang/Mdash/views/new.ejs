@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>New Cats</title>
+</head>
+<body>
+<div id="row">
+    <div>
+      <div>
+         <h2>New Cat:</h2>
+         <h4><a href="/">See other cats</a></h4>
+      </div>
+    </div>
+    <div>
+     <% if(typeof(errors) != 'undefined' ) { %>
+        <% for (var x in errors) { %>
+         <div> <input type="hidden" value="<%= errors[x].message %>"></div>
+         <% } %>
+      <% } %>
+    <form action="/" method="post">
+      
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="integer" name="age">
+        </p>
+        <p>
+            <label for="size">Size:</label>
+            <select name="size">
+            <option selected="selected" disabled=disabled>Size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            </select>
+        </p>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</div>
+</body>
+</html>

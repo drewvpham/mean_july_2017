@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+</div>
+  <button (click)="myButtonEvent()">MyEventButton</button>
+
+
+  {{ user | json }}
+  <form (submit)="mySubmitEvent()">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" 
+      [(ngModel)]="user.name"
+      #name="ngModel"
+      required
+      minlength="4"
+      maxlength="8"
+      >
+      {{ name.errors | json }}
+      <span *ngIf="name.errors && name.errors.required && name.touched">Name cannot be blank</span>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="text" name="email" [(ngModel)]="user.email">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  
+  <div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </table>
+  </div>
+
+
