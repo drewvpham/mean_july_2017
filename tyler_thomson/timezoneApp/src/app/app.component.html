@@ -1,0 +1,14 @@
+<div id="wrapper">
+  <h1>US Time Zone Display</h1>
+  <div class="content">
+    <button (click)="currentTime('PST')">PST</button>
+    <button (click)="currentTime('MST')">MST</button>
+    <button (click)="currentTime('CST')">CST</button>
+    <button (click)="currentTime('EST')">EST</button>
+    <button (click)="reset()">Clear</button>
+  </div>
+
+
+  <h2>{{ myDate | date : 'medium' }}</h2>
+  <h1>"Expected Time: 1hr" is wildly unrealistic. Screw this project, I'm moving on</h1>
+</div>
