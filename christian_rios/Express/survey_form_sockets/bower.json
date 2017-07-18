@@ -1,0 +1,20 @@
+{
+  "name": "survey_form_sockets",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "cxdot <crios_23@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

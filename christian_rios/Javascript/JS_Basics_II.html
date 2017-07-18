@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // function magic_multiply(x, y) {
+        //     let test1 = x * y
+        //     console.log(test1);
+        // };
+        // magic_multiply(5, 2)
+        //     // -- anonymous function, stored in a variable --
+        // let test2 = function(x, y) {
+        //     console.log(test2);
+        // };
+        // magic_multiply(0, 0)
+        //     // -- standalone function, stored in a variable --
+
+        // function magic_multiply(x, y){
+        // console.log("Error: Cannot multiply string by a number.")
+        // }
+        // magic_multiply(7, "three")
+
+
+
+        function magic_multiply(x, y) {
+            var newArr = []
+            for (var i = 0; i < x.length; i++) {
+                newArr.push(x[i] * y)
+            }
+            console.log(newArr)
+        }
+        magic_multiply([1, 2, 3], 2)
+    </script>
+</body>
+
+</html>

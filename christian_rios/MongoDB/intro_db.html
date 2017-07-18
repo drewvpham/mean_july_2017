@@ -1,0 +1,41 @@
+use my_firstdb
+
+db.createCollection("")
+
+db.students.insert({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.students.find()
+
+db.students.find({home_state: "Texas"}).pretty()
+
+db.students.find({lucky_number: {$gt: 3}})
+
+db.students.find({lucky_number: {$lte: 10}})
+
+db.students.find({lucky_number: {$gt: 1, $lt: 9}})
+
+db.students.updateMany({}, { $set: { interests: ["coding", "brunch", "MongoDB"] } } )
+
+db.students.update( { name: "Christian" }, { $push: { interests: "fishing" } } ) 
+
+db.students.update( { name: "Christian" }, { $push: { interests: "taxes" } } ) 
+
+db.students.update( { name: "Christian" }, { $pull: { interests: "taxes" } } ) 
+
+db.students.remove( { $or: [ { home_state: "California"  }, { home_state: "Washington" } ] } )
+
+db.students.remove( { name: "Lauren" } )
+
+db.students.remove( { name: "Jenna" }, { lucky_number: {$gt: 5} } )
+
+db.students.updateMany( {}, { $set: { number_of_belts: 0 } } )
+
+db.students.updateMany( {home_state: "Texas"}, { $inc { number_of_belts: 1 } } )
+
+db.students.updateMany( { home_state: "Texas" }, { $inc: { number_of_belts: 1} } )
+
+db.students.updateMany( {}, { $rename: { 'number_of_belts': 'belts_earned' } } )
+
+db.students.updateMany( { }, { $unset: { lucky_number: "" } }, { multi: true } )
+
+db.students.insert({"date":new Date(Date.now())});

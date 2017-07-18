@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>The Dojo Message Board</h1>
+	<hr>
+	<form action="/messages" method="post">
+		<div>
+			<label>Name:</label>
+		</div>
+		<div>
+			<input type="input" name="name">
+		</div>
+		<div>
+			<label>Message:</label>
+		</div>
+		<div>
+			<textarea rows="4" name="message"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="Post Message">
+		</div>
+	</form>
+		<div>
+			<% for(message of messages) { %>
+			<h3>Name: <%= message.name %></h3>
+			<h3>Message: <%= message.message %></h3>
+				<h4>Comments:</h4>
+				<% for(comment of message.comments) { %>
+				<h5>Name: <%= comment.name %></h5>
+				<h5>Comment: <%= comment.comment %></h5>
+				<div>
+					<form action="/remove/<%= comment._id %>" method="post">
+						<input type="submit" value="Remove Comment">
+					</form>
+				</div>
+				<% } %>
+			<div>
+				<form action="/comments" method="post">
+				<input type="hidden" name="message" value="<%= message._id %>">
+					<div>
+						<label>Name:</label>
+					</div>
+					<div>
+						<input type="input" name="name">
+					</div>
+					<div>
+						<label>Comment:</label>
+					</div>
+					<div>
+						<textarea rows="4" name="comment"></textarea>
+					</div>
+					<div>
+						<input type="submit" value="Post Comment">
+					</div>
+				</form>
+			</div>	
+			<hr>
+			<% } %>
+		</div>
+</body>
+</html>
