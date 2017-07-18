@@ -1,0 +1,7 @@
+<div id="wrapper">
+  <h1>Switchboard</h1>
+  <div class="inline" *ngFor="let switch of switchboard; let i = index">
+    <button *ngIf="switch" [ngClass]="{'on': switch}" (click)="flip(i)">On</button>
+    <button *ngIf="!switch" [ngClass]="{'on': switch}" (click)="flip(i)">Off</button>
+  </div>
+</div>

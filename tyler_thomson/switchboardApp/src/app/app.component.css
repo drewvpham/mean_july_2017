@@ -1,0 +1,31 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper{
+  width:1000px;
+}
+h1{
+  text-align: center;
+}
+
+.inline{
+  display:inline-block;
+}
+
+button{
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px;
+  background-color:red;
+  font: black;
+  text-align: center;
+}
+button.on{
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px;
+  background-color:green;
+  font: black;
+  text-align: center;
+}
