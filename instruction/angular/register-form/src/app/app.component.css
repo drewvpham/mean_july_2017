@@ -1,0 +1,47 @@
+.container {
+	margin: 10%;
+}
+.ng-invalid {
+	border: 2px solid #f00;
+	border-style: inset;
+	border-image: initial;
+}
+.ng-valid {
+	border: 2px solid green;
+	outline: green;
+	outline-offset: -2px;
+}
+.ng-untouched {
+	border-color: initial;
+	border-style: inset;
+	border-image: initial;
+}
+#form {
+	border: none;
+}
+input:focus{
+	outline-offset: 0;
+	outline: none;
+}
+input	{
+	margin: 3px 0;
+}
+.error{
+	color: red;
+}
+label {
+	width: 125px;
+	text-align: right;
+	display: inline-block;
+}
+input {
+	width: 300px;
+}
+.submit_button {
+	margin-left: 130px;
+	width: 302px;
+}
+.green {
+	color: green;
+}
+

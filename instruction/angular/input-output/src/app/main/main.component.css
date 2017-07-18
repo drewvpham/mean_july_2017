@@ -1,0 +1,8 @@
+.main {
+    /* float: right; */
+    width: 64%;
+    display: inline-block;
+}
+    .main p {
+        margin: 10px 40px;
+    }

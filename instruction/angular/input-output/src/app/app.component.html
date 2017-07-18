@@ -1,0 +1,8 @@
+<div class="container">
+  <h4 class="nameBlock">{{ title }}</h4>
+  <app-header-component></app-header-component>
+  <app-nav (myEvent)="newLink($event)" [links]="links" [styles]="styles"></app-nav>
+  <router-outlet></router-outlet>
+  <!-- <app-main [styles]="styles"></app-main> -->
+  <app-footer [styles]="styles" [quickLinks]="quickLinks"></app-footer>
+</div>

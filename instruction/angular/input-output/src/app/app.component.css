@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.nameBlock { 
+    border-bottom: 1px solid grey;
+    text-align: center;
+    margin: 0;
+}
+.container {
+    widows: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.container-style { 
+    border: 2px solid black;
+    padding: 5px;
+    background: #96B5D9;
+}
