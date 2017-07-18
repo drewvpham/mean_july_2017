@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1> {{ title }} </h1>
+
+
+<button (click)= "changeTo('PST')" [ngClass]="{selected : zone === 'PST'}"  >PST</button>
+<button (click)= "changeTo('MST')" [ngClass]="{selected : zone === 'MST'}">MST</button>
+<button (click)= "changeTo('CST')" [ngClass]="{selected : zone === 'CST'}">CST</button>
+<button (click)= "changeTo('EST')" [ngClass]="{selected : zone === 'EST'}">EST</button>
+
+<button (click) = " reset() ">Reset</button>
+
+<h2> {{ today | date : 'medium' }} </h2>
