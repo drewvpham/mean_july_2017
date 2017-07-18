@@ -26,6 +26,8 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Intro to TypeScript and Angular (Part 1)](https://youtu.be/Z_C8ZLkEICI "MEAN - Intro to TypeScript and Angular (Part 1)") <br>
 [MEAN - Intro to TypeScript and Angular (Part 2)](https://youtu.be/gB8VFqAI4hc "MEAN - Intro to TypeScript and Angular (Part 2)") <br>
 [MEAN - Angular Event Binding and Forms](https://youtu.be/tFClAHE503M "MEAN - Angular Event Binding and Forms") <br>
+[MEAN - Angular Passing Data Through Components](https://youtu.be/mFcEX0JApNE "MEAN - Angular Passing Data Through Components") <br>
+[MEAN - Angular Services](https://youtu.be/0-t2dU11cvk "MEAN - Angular Services") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>

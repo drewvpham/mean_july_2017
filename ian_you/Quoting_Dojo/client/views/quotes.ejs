@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Here are the awesome quotes!</h1>
+    <hr>
+    <div class="quotes">
+      <% for (let quote of quotes) { %>
+        <p><%=  quote.quote %></p>
+        <p><%= quote.name %> at
+        <%= quote.createdAt.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true}) %> <%= quote.createdAt.toDateString() %> </p>
+        <hr>
+      <% } %>
+    </div>
+
+  </body>
+</html>

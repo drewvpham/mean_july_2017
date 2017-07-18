@@ -1,0 +1,12 @@
+div{
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    width: 382px;
+    margin: 20px;
+    background-color: cornflowerblue;
+}
+
+p:first-child{
+    display: inline;
+}
