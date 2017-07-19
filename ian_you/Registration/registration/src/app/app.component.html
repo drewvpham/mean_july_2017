@@ -42,11 +42,12 @@
 
     <p><label>Confirm Password: </label>
       <input type="password" name="confirm_password" 
-      [(ngModel)]="user.confirm_password" #confirmPassword="ngModel"
+      [(ngModel)]="user.confirm_password" 
+      #confirmPassword="ngModel"
       minlength="8"
-      [ngClass] = "{valid: confirmPassword.valid }"
+      [ngClass] = "{valid: confirmPassword.valid && confirmPassword.value == password.value }"
       required/>
-    <span *ngIf="user.password != user.confirm_password && (confirmPassword.dirty || confirmPassword.touched)"> Confirm Password must be matched </span></p>
+    <span *ngIf=" confirmPassword.value != password.value && (confirmPassword.dirty || confirmPassword.touched)"> Confirm Password must be matched </span></p>
 
     <p><label>Stree Address: </label>
       <input type="text" name="street_address" 
