@@ -1,0 +1,29 @@
+#board {
+    width : 800px;
+    height : 80px;
+    border: 1px solid black;
+    padding: 19px 5px;
+    background-color: goldenrod; 
+}
+
+.switch{
+    display: inline-block;
+    border: 1px solid black;
+    margin: 2px 5px;
+    width : 68px;
+    height: 75px;
+    background-color: red;
+
+}
+
+
+#board .on {
+    background-color: green;
+   
+}
+
+p{
+  text-align: center;
+  line-height: 44px  
+}
+

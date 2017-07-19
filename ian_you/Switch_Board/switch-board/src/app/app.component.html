@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+
+<div id = 'board'>
+  <div class = "switch" 
+  *ngFor = "let switch of list; let i = index" 
+  (click) = 'switch_change(i)' 
+  [ngClass] = " {on : switch.status == true} " >
+    <p *ngIf = "switch.status == true" >ON</p>
+    <p *ngIf = "switch.status == false" >OFF</p>
+  </div>
+  
+    
+  
+</div>

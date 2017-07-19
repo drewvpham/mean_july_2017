@@ -1,0 +1,9 @@
+<div>
+  <h3>Super Saiyan Three Component</h3>
+  Power Level : {{ power.super_saiyan_three }}
+
+  <p *ngIf=" power.super_saiyan_three > 9000 && power.super_saiyan_three <=20000 && power.super_saiyan_three !== 50000"> Over 9000! </p>
+  <p *ngIf=" power.super_saiyan_three > 20000  && power.super_saiyan_three !== 50000"> Superlative! </p>
+  <p *ngIf=" power.super_saiyan_three == 50000 "> "The One" </p>
+
+</div>

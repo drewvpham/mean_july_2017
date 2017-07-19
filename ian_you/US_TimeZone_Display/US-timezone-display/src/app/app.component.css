@@ -1,0 +1,7 @@
+button{
+    margin : 5px;
+}
+
+.selected {
+    background-color: yellow;
+}

@@ -1,0 +1,16 @@
+div span {
+    color: red
+}
+
+.valid {
+    border: 3px solid green;
+}
+
+.invalid {
+    border: 3px solid red;
+}
+
+#registered{
+    border: 1px solid green;
+    color : green
+}

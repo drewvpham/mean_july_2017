@@ -1,0 +1,21 @@
+<div>
+  <h1>GitHub Score</h1>
+  <form #form = 'ngForm' (submit) = "onSubmit(user)" >
+    <label for="">GitHub Username: </label>
+    <input type="text" name="username" [(ngModel)] = "user.username" required ngModel/>
+    <input type="submit" value="Submit" [disabled]= "!form.valid"> 
+  </form>
+  
+</div>
+<div *ngIf = " error_msg != '' ">
+  <p > {{ error_msg }} </p>
+</div>
+<div *ngIf = " error_msg == '' && score != '' ">
+  <h2>Your Score : <span> {{ score }} </span></h2>
+  <p *ngIf = "score != '' && score < 20" [ngStyle] = "{ 'color' : 'red' }" >Needs Work! </p>
+  <p *ngIf = "score != '' && score >= 20 && score < 50" [ngStyle] = "{ 'color' : 'orange' }">A decent start! </p>
+  <p *ngIf = "score != '' && score >= 50 && score < 100" [ngStyle] = "{ 'color' : 'black' }"> Doing good! </p>
+  <p *ngIf = "score != '' && score >= 100 && score < 200" [ngStyle] = "{ 'color' : 'green' }"> Great job! </p>
+  <p *ngIf = "score != '' && score >= 200" [ngStyle] = "{ 'color' : 'blue' }"> GitHub Elite! </p>
+</div>
+

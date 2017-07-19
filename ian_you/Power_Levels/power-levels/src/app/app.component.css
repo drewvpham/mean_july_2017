@@ -1,0 +1,12 @@
+div{
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom : 20px;
+    width: 900px;
+    
+}
+
+div p, div h1 {
+    padding-left: 10px;
+    text-align: left;
+}
