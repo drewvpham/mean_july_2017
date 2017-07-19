@@ -28,6 +28,8 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Angular Event Binding and Forms](https://youtu.be/tFClAHE503M "MEAN - Angular Event Binding and Forms") <br>
 [MEAN - Angular Passing Data Through Components](https://youtu.be/mFcEX0JApNE "MEAN - Angular Passing Data Through Components") <br>
 [MEAN - Angular Services](https://youtu.be/0-t2dU11cvk "MEAN - Angular Services") <br>
+[MEAN - Angular Routing](https://youtu.be/5KSyo4BFqCU "MEAN - Angular Routing") <br>
+[MEAN - Connecting Angular to Express](https://youtu.be/5bnZ68Z14Bg "MEAN - Connecting Angular to Express") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
