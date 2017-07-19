@@ -1,0 +1,9 @@
+*{
+  box-sizing:border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.container-style{
+  border: 2px solid black;
+  padding: 5px;
+  background: #96B5D9;
+}

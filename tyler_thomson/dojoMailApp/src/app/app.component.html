@@ -1,0 +1,20 @@
+<div id="wrapper">
+  <div id="main">
+    <h1>Dojo Mail</h1>
+    <table>
+      <tr>
+        <th><h2>Email</h2></th>
+        <th><h2>Importance</h2></th>
+        <th><h2>Subject</h2></th>
+        <th><h2>Content</h2></th>
+      </tr>
+      <tr *ngFor="let email of emailArray">
+        <td>{{email.email}}</td>
+        <td *ngIf="email.importance == true">High</td>
+        <td *ngIf="email.importance == false">Low</td>
+        <td>{{email.subject}}</td>
+        <td>{{email.content}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

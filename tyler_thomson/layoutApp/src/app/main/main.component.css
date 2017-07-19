@@ -1,0 +1,11 @@
+.container_style {
+  background: #96B5D9;
+  border: 2px solid black;
+  padding: 5px;
+  vertical-align: top;
+  }
+  .main{
+    display: inline-block;
+    width: 60%;
+    margin-left: 2%;
+  }
