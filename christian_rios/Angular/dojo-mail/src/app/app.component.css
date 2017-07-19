@@ -1,0 +1,14 @@
+div.container {
+    width: 970px;
+    margin: 0 auto;
+}
+
+table thead th {
+    text-align: left;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
