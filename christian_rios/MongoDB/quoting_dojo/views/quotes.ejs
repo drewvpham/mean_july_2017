@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QuotingDojo</title>
+  </head>
+  <body>
+    <form action="/home" method="get">
+      <input type="submit" value="Home">
+    </form>
+    <div>
+      <h1>Here are the awesome quotes!</h1>
+
+      <% for(var quote of quotes) { %>
+      <p>"<%= quote.quote %>"</p>
+      <p>-<%= quote.name %> on <%= quote.createdAt %></p>
+      <% } %>
+
+
+      <form action="/remove" method="post">
+        <input type="submit" value="Remove">
+      </form>
+    </div>
+  </body>
+</html>

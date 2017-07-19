@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practice</title>
+  </head>
+  <body>
+
+
+    <form action="/users" method="post">
+      <label>Name:</label>
+      <input type="text" name="name" />
+
+      <label>Age:</label>
+      <input type="text" name="age" />
+
+      <input type="submit" value="Submit">
+
+    </form>
+    <% for(var user of users) { %>
+    <p><%= user.name %></p>
+    <p><%= user.age %></p>
+    <% } %>
+
+
+    <form action="/remove" method="post">
+      <input type="submit" value="Remove">
+    </form>
+  </body>
+</html>

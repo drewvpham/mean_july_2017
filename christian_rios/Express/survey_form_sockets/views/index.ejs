@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Enter Info</title>
+        <script src="/jquery/dist/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            $(function(){
+                var socket = io.connect();
+                var name;
+                var location;
+                var language;
+                var comment;
+
+                $('#info').submit(function(){
+                    location = $('#location_input').val();
+                    language = $('#language_input').val();
+                    comment = $('#comment_input').val();
+                    name = $('#name_input').val();
+                    $('#name_error').html('');
+                    if(!name){
+                        $('#name_error').html('Name cannot be blank').css('color', 'red');
+                    } else {
+                        socket.emit('user_info', {"name": name})
+                    }
+                    if(location){
+                        socket.emit('user_info', {"location": location})
+                    }
+                    if(language){
+                        socket.emit('user_info', {"language": language})
+                    }
+                    if(comment){
+                        socket.emit('user_info', {"comment": comment})
+                    }
+
+                    //sending message 'info_stored' to the back-end
+                    socket.emit('posting_form', { "name": name, "location": location, "language": language, "comment": comment})
+
+                    return false;
+                  })
+
+                //listening for message 'submit_response' from the back-end
+                  socket.on('update_message', function(data){
+                      console.log(data)
+                      let html_str = `<p> You emmited the following information to the server: {" Name: ${data.name}, Location: '${data.location}', Language: ${data.language}..., Comment: ${data.comment}"</p>
+                      <p>Your lucky number emitted by the server is ${data.rand}.</p>`
+                      $('#info_submitted').append(html_str);
+                  })
+
+
+                })
+
+        </script>
+    </head>
+    <body>
+            <div id="info_submitted" style="background-color: green; color: white;">
+
+            </div>
+            <form id="info">
+                <div>
+                    <label>Your Name:</label>
+                	<input id="name_input" type="text" name="yourname">
+                    <p id="name_error"></p>
+                </div>
+
+            	<div>
+                    <label>Dojo Location:</label>
+                	<select id="location_input" name="location">
+                		   	<option value="USA">USA</option>
+            				<option value="Aussie">Australia</option>
+            				<option value="Brazil">Brazil</option>
+           					<option value="London">London</option>
+          			  </select>
+            	</div>
+
+                <div>
+          			<label>Favorite Language:</label>
+          			<select id="language_input" name="language">
+                		<option value="Java">Java</option>
+            				<option value="Python">Python</option>
+            				<option value="Ruby">Ruby</option>
+           					<option value="Swift">Swift</option>
+          			</select>
+                </div>
+
+                <div>
+      			<label>Comments (optional):</label><br>
+      			<textarea id="comment_input" name="comment"></textarea>
+      			<br>
+      			<input id="submit" type="submit" value="Hit it!"/>
+                </div>
+            </form>
+    </body>
+</html>
