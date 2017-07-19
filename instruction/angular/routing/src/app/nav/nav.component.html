@@ -1,0 +1,3 @@
+<div id="nav">
+  <button [routerLink]="['/', link, idx + 1]" *ngFor="let link of links; let idx = index">{{link}}</button>
+</div>

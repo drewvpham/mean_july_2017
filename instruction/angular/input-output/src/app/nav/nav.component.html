@@ -1,0 +1,5 @@
+<div class="nav" [ngStyle]="styles.container_style">
+  <p [ngStyle]="styles.component_title">NavComponent</p>
+  <button (click)="newLink()">New Link Button</button>
+  <button [routerLink]="['/', link, idx.toString()]" class="link" *ngFor="let link of links; let idx = index">{{ link }}</button>
+</div>
