@@ -1,0 +1,16 @@
+<div id='container'>
+  <h1>Switchboard</h1>
+  <div class='brown'>
+    <div class = 'switch' *ngFor='let switch of switches; let i=index'>
+      <button *ngIf='switch' [ngClass]="{'on': switch}" (click)="flipper(i)">
+        On      
+      </button>
+      <button *ngIf='!switch' [ngClass]="{'on': switch}" (click)="flipper(i)">
+        Off      
+      </button>
+    </div>
+  </div>
+  
+
+
+</div>

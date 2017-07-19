@@ -1,0 +1,21 @@
+h1{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+div{
+    
+    display: inline-block;
+    height: 300px;
+    width: 150px;
+    background-color: lightskyblue;
+    vertical-align: top;
+    margin-right: 20px;
+    
+}
+
+button{
+    display: block;
+    margin-left: 50px;
+    margin-top: 5px;
+}

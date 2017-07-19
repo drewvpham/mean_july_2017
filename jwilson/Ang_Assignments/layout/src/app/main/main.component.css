@@ -1,0 +1,15 @@
+h1{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+div{
+    
+    display: inline-block;
+    height: 272px;
+    width: 397px;
+    background-color: lightskyblue;
+    padding: 15px;
+    
+    
+}

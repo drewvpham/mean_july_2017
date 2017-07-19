@@ -1,0 +1,30 @@
+
+
+#container {
+    width: 550px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+div.row {
+    margin: 0 auto;
+}
+.switch {
+    display: inline;
+}
+button {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    outline: none;
+    margin-top: 10px;
+}
+button.on {
+    background-color: green;
+    outline: none;
+}
+.brown{
+    background-color: brown;
+    width: auto;
+    height: 75px;
+    padding: 7px;
+}
