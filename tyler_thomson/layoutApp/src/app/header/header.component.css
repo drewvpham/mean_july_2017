@@ -1,0 +1,10 @@
+.container_style {
+  background: #96B5D9;
+  border: 2px solid black;
+  padding: 5px;
+  vertical-align: top;
+  }
+  .header{
+    width: 90%;
+    margin-bottom: 25px;
+  }

@@ -1,0 +1,17 @@
+button{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 5px;
+}
+.container_style {
+  background: #96B5D9;
+  border: 2px solid black;
+  padding: 5px;
+  vertical-align: top;
+  }
+  .nav{
+    display: inline-block;
+    width: 25%;
+  }
