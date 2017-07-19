@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="container">
+  <form (submit)='onSubmit(newUser)'>
+    <div>
+      <label>Github Username:</label>
+      <input type='text' name='username' [(ngModel)]='newUser.username'>
+    </div>
+    <input type='submit' value='submit'>
+  </form>
+  <p [ngStyle]="{'color': 'red'}" *ngIf="error_msg != ''">{{error_msg}}</p>
+</div>
+<div>
+  <h1> Your Score: <span>{{score}}</span></h1>
+  {{newUser | json}}<p>
+  {{newUser.username}}
+  {{score}}
+</div>
