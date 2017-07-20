@@ -12,6 +12,11 @@ export class SaiyanComponent implements OnInit {
   @Input() power;
 
   ngOnInit() {
+
+  }
+
+  ngOnChanges() {
+    this.power = this.power * 10;
   }
 
 }

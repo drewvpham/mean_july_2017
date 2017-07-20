@@ -13,4 +13,8 @@ export class SupersaiyanComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges() {
+    this.power = this.power * 90;
+  }
+
 }

@@ -12,5 +12,8 @@ export class SupersaiyanthreeComponent implements OnInit {
 
   ngOnInit() {
   }
+  ngOnChanges() {
+    this.power = this.power * 250;
+  }
 
 }

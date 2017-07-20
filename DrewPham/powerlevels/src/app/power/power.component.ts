@@ -6,12 +6,17 @@ import { NgForm } from '@angular/forms'
   styleUrls: ['./power.component.css']
 })
 export class PowerComponent implements OnInit {
-  power: number
+
+  newFighter= {power: 0};
 
   constructor() { }
 
+  mySubmitEvent(power){
+    console.log(power);
+  }
+
   ngOnInit() {
-    this.power = 10;
+
   }
 
 }

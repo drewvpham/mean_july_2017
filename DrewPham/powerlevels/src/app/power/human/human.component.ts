@@ -12,6 +12,7 @@ export class HumanComponent implements OnInit {
   @Input() power;
 
   ngOnInit() {
+    
   }
 
 }
