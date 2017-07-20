@@ -1,0 +1,56 @@
+<div>
+  <ul>
+    <li [routerLink]="['/dashboard']" class="inline">Browse</li>
+    <li [routerLink]="['/my_listings']" class="inline">My Listings</li>
+    <li (click)="logout()" class="inline">Log Off</li>
+  </ul>
+</div>
+<div>
+  {{ currentUser | json }}
+  <h3>New Bike</h3>
+  <form (submit)="createBike(newBike)" #bikeForm="ngForm">
+    <div>
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="newBike.title">
+    </div>
+    <div>
+      <label>Description</label>
+      <input type="text" name="description" [(ngModel)]="newBike.description">
+    </div>
+    <div>
+      <label>Location</label>
+      <input type="text" name="location" [(ngModel)]="newBike.location">
+    </div>
+    <div>
+      <label>Price</label>
+      $<input type="number" min="1" name="price" [(ngModel)]="newBike.price">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div>
+  <h3>My Listings</h3>
+  <div *ngFor="let bike of currentUser.bikes; let idx = index">
+    {{ bike | json}}
+    <form (submit)="updateBike(bike)">
+      <div>
+        <label>Title</label>
+        <input type="text" name="title" [(ngModel)]="bike.title">
+      </div>
+      <div>
+        <label>Description</label>
+        <input type="text" name="description" [(ngModel)]="bike.description">
+      </div>
+      <div>
+        <label>Price</label>
+        <input type="number" min="1" name="price" [(ngModel)]="bike.price">
+      </div>
+      <div>
+        <label>Location</label>
+        <input type="text" name="location" [(ngModel)]="bike.location">
+      </div>
+      <input type="submit" value="Update">
+      <button (click)="destroyBike(bike._id, idx)">Delete</button>
+    </form>
+  </div>
+</div>

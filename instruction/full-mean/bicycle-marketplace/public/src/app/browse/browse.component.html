@@ -1,0 +1,20 @@
+<div>
+  <ul>
+    <li [routerLink]="['/dashboard']" class="inline">Browse</li>
+    <li [routerLink]="['/my_listings']" class="inline">My Listings</li>
+    <li (click)="logout()" class="inline">Log Off</li>
+  </ul>
+</div>
+<div *ngFor="let bike of bikes; let idx = index">
+  <p>{{ bike.title}}</p>
+  <p>{{ bike.description }}</p>
+  <p>{{ bike.price }}</p>
+  <p>{{ bike.location }}</p>
+  <button *ngIf="bike.user._id == currentUser._id" (click)="destroyBike(bike._id, idx)">Delete</button>
+  <button *ngIf="bike.user._id != currentUser._id" (click)="alertUserInfo(idx)">Contact</button>
+  <div *ngIf="bike.display">
+    <h4>{{ bike.user.name }}</h4>
+    <h4>{{ bike.user.email }}</h4>
+    <button (click)="hideUserInfo(idx)">Hide</button>
+  </div>
+</div>

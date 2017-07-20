@@ -4,12 +4,14 @@
     Welcome to {{title}}!
   </h1>
 
-  <button (click)= "changeZone('PST')" [ngClass]="{selected : zone === 'PST'}">PST</button>
-  <button (click)= "changeZone('MST')" [ngClass]="{selected : zone === 'MST'}">MST</button>
-  <button (click)= "changeZone('CST')" [ngClass]="{selected : zone === 'CST'}">CST</button>
-  <button (click)= "changeZone('EST')" [ngClass]="{selected : zone === 'EST'}">EST</button>
+  <button (click)= "changeZone('PST')" [ngClass]="{'selected' : zone === 'PST'}">PST</button>
+  <button (click)= "changeZone('MST')" [ngClass]="{'selected' : zone === 'MST'}">MST</button>
+  <button (click)= "changeZone('CST')" [ngClass]="{'selected' : zone === 'CST'}">CST</button>
+  <button (click)= "changeZone('EST')" [ngClass]="{'selected' : zone === 'EST'}">EST</button>
 
-  <button (click) = " reset() ">Reset</button>
+  <button (click) = "reset()">Reset</button>
+
+
 
   <h2> {{ time | date : 'medium' }} </h2>
 </div>
