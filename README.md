@@ -30,6 +30,7 @@ https://codingdojo-dallas.slack.com/files/katemoc/F427ZQZPY/github_workflow_v4.p
 [MEAN - Angular Services](https://youtu.be/0-t2dU11cvk "MEAN - Angular Services") <br>
 [MEAN - Angular Routing](https://youtu.be/5KSyo4BFqCU "MEAN - Angular Routing") <br>
 [MEAN - Connecting Angular to Express](https://youtu.be/5bnZ68Z14Bg "MEAN - Connecting Angular to Express") <br>
+[MEAN - Angular Message Board](https://youtu.be/TwE4w9ci6dA "MEAN - Angular Message Board") <br>
 
 # Resources
 [W3Schools - JavaScript](https://www.w3schools.com/js/ "W3Schools - JavaScript") <br>
