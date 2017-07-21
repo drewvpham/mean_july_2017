@@ -1,0 +1,9 @@
+<div class="childStyles">
+  <fieldset>
+    <legend>SuperSaiyanFourComponent</legend>
+    <h4>Power Level: {{ power?.supersaiyanfour }}</h4>
+    <h3 *ngIf="power?.supersaiyanfour > 9000 && power?.supersaiyanfour < 20000">Over 9000!</h3>
+    <h3 *ngIf="power?.supersaiyanfour > 20000 && power?.supersaiyanfour < 50000">Superlative!</h3>
+    <h3 *ngIf="power?.supersaiyanfour == 50000 ">The One</h3>
+  </fieldset>
+</div>

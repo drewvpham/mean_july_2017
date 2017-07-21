@@ -1,0 +1,18 @@
+<fieldset>
+  <legend>PowerComponent</legend>
+  <form>
+    <label>Initial Power Level:</label>
+    <select [(ngModel)] = 'power.level' name="powerLevel">
+      <option *ngFor="let level of pRange">{{ level }}</option>
+    </select>
+    <button (click)="calcPower(power)">Calculate Power Levels</button>
+  </form>
+  <div class="comps">
+    <app-human [power]="power" [childStyles]="childStyles"></app-human>
+    <app-saiyan [power]="power" [childStyles]="childStyles"></app-saiyan>
+    <app-supersaiyan [power]="power" [childStyles]="childStyles"></app-supersaiyan>
+    <app-supersaiyantwo [power]="power" [childStyles]="childStyles"></app-supersaiyantwo>
+    <app-supersaiyanthree [power]="power" [childStyles]="childStyles"></app-supersaiyanthree>
+    <app-supersaiyanfour [power]="power" [childStyles]="childStyles"></app-supersaiyanfour>
+  </div>
+</fieldset>
