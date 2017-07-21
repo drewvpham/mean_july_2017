@@ -1,0 +1,23 @@
+<header>
+  <section class="left">
+    <span class="title">Adjust Incoming Power Level: </span>
+    <form (submit)="mySubmitEvent(newFighter.power)">
+    <input type="number" max="100" min="0" [(ngModel)]='newFighter.power' name='power'>
+    <input type="submit" value='Calculate Powers' >
+  </form>
+
+
+  </section>
+  <img src="../../assets/vegeta.jpg" alt="">
+
+
+</header>
+  {{power | json}}
+<section class="body">
+  <app-human [power]="newFighter.power"></app-human>
+  <app-saiyan [power]="newFighter.power"></app-saiyan>
+  <app-supersaiyan [power]="newFighter.power"></app-supersaiyan>
+  <app-supersaiyantwo [power]="newFighter.power"></app-supersaiyantwo>
+  <app-supersaiyanthree [power]="newFighter.power"></app-supersaiyanthree>
+  <app-supersaiyanfour [power]="newFighter.power"></app-supersaiyanfour>
+</section>
